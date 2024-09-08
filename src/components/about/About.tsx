@@ -48,7 +48,7 @@ function AboutImpl(props: Props) {
             version.meta && version.premium ? 'https://github.com/SagerNet/sing-box' : version.meta ? 'https://github.com/MetaCubeX/Clash.Meta' : 'https://github.com/Dreamacro/clash'
           } />
        ) : null}
-      <Version name="Yacd" version={__VERSION__} link="https://github.com/haishanh/yacd" />
+      <Version name="Dashboard" version={__VERSION__} link="https://github.com/CHIZI-0618/yacd" />
     </>
   );
 }

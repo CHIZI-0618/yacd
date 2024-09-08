@@ -12,10 +12,10 @@ const mapState = (s: State) => ({
 
 function HeadImpl({ apiConfig, apiConfigs }: { apiConfig: ClashAPIConfig; apiConfigs: any[] }) {
   React.useEffect(() => {
-    let title = 'yacd';
+    let title = 'Dashboard';
     if (apiConfigs.length > 1) {
       try {
-        title = `${apiConfig.metaLabel || new URL(apiConfig.baseURL).host} - yacd`;
+        title = `${apiConfig.metaLabel || new URL(apiConfig.baseURL).host} - Dashboard`;
       } catch (e) {
         // ignore
       }
