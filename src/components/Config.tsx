@@ -223,7 +223,7 @@ function ConfigImpl({
   );
 
   const modeOptions = useMemo(() => {
-    return configState.modes || ['Global', 'Rule', 'Direct'];
+    return configState["mode-list"] || configState.modes || ['Global', 'Rule', 'Direct'];
   }, [configState.modes]);
 
   return (
