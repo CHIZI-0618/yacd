@@ -224,7 +224,7 @@ function ConfigImpl({
 
   const modeOptions = useMemo(() => {
     return configState["mode-list"] || configState.modes || ['Global', 'Rule', 'Direct'];
-  }, [configState.modes]);
+  }, [configState["mode-list"], configState.modes]);
 
   return (
     <div>
@@ -249,7 +249,7 @@ function ConfigImpl({
           <div className={s0.label}>Mode</div>
           <Select
             options={modeOptions.map((mode) => [mode, mode])}
-            selected={mode}
+            selected={modeOptions.find(m => m.toLowerCase() === mode.toLowerCase()) || mode}
             onChange={(e) => handleChangeValue({ name: 'mode', value: e.target.value })}
           />
         </div>
